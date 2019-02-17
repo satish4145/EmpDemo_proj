@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>demowebproj</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+  
+  <servlet-name>satishservlet</servlet-name>
+  <servlet-class>com.demo.servlet.SatishServlet</servlet-class>
+  
+  </servlet>
+  
+  <servlet-mapping>
+
+  <servlet-name>satishservlet</servlet-name>
+  <url-pattern>/myservlet</url-pattern> 
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>satishgenericservlet</servlet-name>
+  <servlet-class>com.demo.servlet.SatishGenericServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+ <servlet-name>satishgenericservlet</servlet-name>
+ <url-pattern>/mygenservlet</url-pattern>
+ </servlet-mapping>
+  
+<servlet>
+  <servlet-name>satishhttpservlet</servlet-name>
+  <servlet-class>com.demo.servlet.SatishHttpServlet</servlet-class>
+  </servlet>
+  
+ <servlet-mapping>
+ <servlet-name>satishhttpservlet</servlet-name>
+ <url-pattern>/myhttpservlet</url-pattern>
+ </servlet-mapping>
+  
+
+<servlet>
+<servlet-name>EmpServlet</servlet-name>
+<servlet-class>com.demo.servlet.EmpServlet</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>EmpServlet</servlet-name>
+ <url-pattern>/myempservlet</url-pattern>
+ </servlet-mapping>
+
+<servlet>
+<servlet-name>GetEmployee</servlet-name>
+<servlet-class>com.demo.servlet.GetEmployee</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>GetEmployee</servlet-name>
+ <url-pattern>/getemployeedetails</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+<servlet-name>UpdateEmployee</servlet-name>
+<servlet-class>com.demo.servlet.UpdateEmployee</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>UpdateEmployee</servlet-name>
+ <url-pattern>/updateemp</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ 
+ 
+  <servlet>
+<servlet-name>GetAllEmployees</servlet-name>
+<servlet-class>com.demo.servlet.GetAllEmployees</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>GetAllEmployees</servlet-name>
+ <url-pattern>/getallemployeedetails</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+<servlet-name>ProductServlet</servlet-name>
+<servlet-class>com.demo.servlet.ProductServlet</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>ProductServlet</servlet-name>
+ <url-pattern>/productportal</url-pattern>
+ </servlet-mapping>
+ 
+   <servlet>
+<servlet-name>GetProducts</servlet-name>
+<servlet-class>com.demo.servlet.GetProducts</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>GetProducts</servlet-name>
+ <url-pattern>/getproductdetails</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+<servlet-name>GetAllProductslist</servlet-name>
+<servlet-class>com.demo.servlet.GetAllProductslist</servlet-class>
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>GetAllProductslist</servlet-name>
+ <url-pattern>/getallproductslist</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ 
+ <servlet>
+<servlet-name>LoadOnStartupservlet</servlet-name>
+<servlet-class>com.demo.servlet.LoadOnStartupservlet</servlet-class>
+ <!-- <load-on-startup>0</load-on-startup> -->
+</servlet>
+
+ <servlet-mapping>
+ <servlet-name>LoadOnStartupservlet</servlet-name>
+ <url-pattern>/loadonstartup</url-pattern>
+ </servlet-mapping>
+ 
+ <filter>
+ <filter-name>testfilter</filter-name>
+ <filter-class>com.demo.servlet.FilterServlet</filter-class>
+ </filter>
+ 
+ <filter-mapping>
+ <filter-name>testfilter</filter-name>
+ <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ 
+ 
+ <listener>
+ <listener-class>
+com.demo.servlet.ContextListener
+ </listener-class> 
+ 
+ </listener>
+ 
+ <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
+</web-app>
